@@ -1,0 +1,24 @@
+{
+  "name": "guitarist",
+  "version": "1.0.0",
+  "description": "A jQuery plugin to manage multiple tabbing contexts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/strictlyaformality/guitarist.git"
+  },
+  "keywords": [
+    "tab",
+    "jquery",
+    "plugin"
+  ],
+  "author": "jonny",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/strictlyaformality/guitarist/issues"
+  },
+  "homepage": "https://github.com/strictlyaformality/guitarist#readme"
+}
