@@ -21,6 +21,7 @@
             .on('keydown.guitarist', getTabListener(maxIndex));
     }
 
+    //remove the listener from the tabbable elements
     function removeListeners(){
         $(`[${options.tabAttribute}]`).off('keydown.guitarist');
     }
@@ -68,17 +69,16 @@
             $.extend(options, opts);
             setupElements(this);
         },
-        refresh: function(opts){
-            $.extend(options, opts);
+        refresh: function(){
             removeListeners();
-            setupElement(this);
+            this.guitarist();
         }
     };
 
     $.fn.guitarist = function(method){
         var params = Array.prototype.splice.call(arguments, 1);
         if(!method || $.isPlainObject(method)){
-            params = method;
+            params = [method];
             method = 'init';
         }
 
