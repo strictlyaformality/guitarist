@@ -4,6 +4,13 @@
         <script src="node_modules/jquery/dist/jquery.min.js"></script>
         <script src="jquery.guitarist.js"></script>
         <title>Guitarist Demo</title>
+        <style>
+            .context{
+                border: 1px solid red;
+                padding: 10px;
+                margin: 5px;
+            }
+        </style>
     </head>
     <body>
         <div class="context">
@@ -19,9 +26,54 @@
                 <option>three</options>
                 <option>four</options>
             </select>
+            <div class="context">
+                <input class="junk" />
+                <input class="junk" />
+                <input class="junk" disabled="disabled" />
+                <input class="junk" />
+                <select>
+                    <option>and a one</options>
+                    <option>and a two</options>
+                    <option>and a one</options>
+                    <option>two</options>
+                    <option>three</options>
+                    <option>four</options>
+                </select>
+                <div class="context">
+                    <input class="junk" />
+                    <input class="junk" />
+                    <input class="junk" disabled="disabled" />
+                    <input class="junk" />
+                    <select>
+                        <option>and a one</options>
+                        <option>and a two</options>
+                        <option>and a one</options>
+                        <option>two</options>
+                        <option>three</options>
+                        <option>four</options>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="context">
+            <input class="junk" />
+            <input class="junk" />
+            <input class="junk" disabled="disabled" />
+            <input class="junk" />
+            <select>
+                <option>and a one</options>
+                <option>and a two</options>
+                <option>and a one</options>
+                <option>two</options>
+                <option>three</options>
+                <option>four</options>
+            </select>
         </div>
         <script>
-            $('.context').guitarist({ includeSelector: '.junk'});
+            $('.context').guitarist({ 
+                includeSelector: '.junk',
+                nestedFilter: '.context'
+            });
         </script>
     </body>
 </html>
